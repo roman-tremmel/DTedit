@@ -580,7 +580,8 @@ dteditmod <- function(input, output, session,
     #
     # returns a list of shiny inputs, 'fields'
 
-    if (grepl("selectize", inputTypes) & !is.null(selectize.options)) {
+   # if (grepl("selectize", inputTypes) & !is.null(selectize.options)) {
+    if (any(grepl("selectize", inputTypes)) & !is.null(selectize.options)) {
       # if *any* of the selectize input-type variants in the inputTypes
       # and selectize.options is actually defined
       #
